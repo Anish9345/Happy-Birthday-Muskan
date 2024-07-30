@@ -12,9 +12,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.animated-text {
-    font-size: 2em;
-    animation: colorChange 3s infinite;
+.top-text {
+    color: #ff66b2; /* Pink color */
 }
 
 .top-image {
@@ -31,7 +30,8 @@ body {
     margin-bottom: 20px;
 }
 
-p {
+.bottom-text {
+    color: #3399ff; /* Blue color */
     font-size: 1.2em;
 }
 
@@ -47,12 +47,4 @@ button {
 
 button:hover {
     background-color: #ff3385;
-}
-
-@keyframes colorChange {
-    0% { color: #ff66b2; }
-    25% { color: #3498db; }
-    50% { color: #f1c40f; }
-    75% { color: #2ecc71; }
-    100% { color: #ff66b2; }
 }
