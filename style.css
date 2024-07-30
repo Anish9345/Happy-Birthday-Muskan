@@ -12,8 +12,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, p {
-    color: #ff66b2;
+.animated-text {
+    font-size: 2em;
     animation: colorChange 3s infinite;
 }
 
@@ -51,9 +51,9 @@ button:hover {
 }
 
 @keyframes colorChange {
-    0% { color: #ff66b2; }
-    25% { color: #ff3385; }
-    50% { color: #ffcc00; }
-    75% { color: #66cc66; }
-    100% { color: #ff66b2; }
+    0% { color: #ff66b2; }    /* Pink */
+    25% { color: #3498db; }   /* Blue */
+    50% { color: #f1c40f; }   /* Gold */
+    75% { color: #2ecc71; }   /* Green */
+    100% { color: #ff66b2; }  /* Pink */
 }
