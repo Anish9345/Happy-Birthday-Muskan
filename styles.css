@@ -37,6 +37,20 @@ body {
     font-size: 1.2em;
 }
 
+button {
+    background-color: #ff66b2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
 /* Horizontal rotation animation */
 @keyframes rotate {
     0% {
