@@ -32,7 +32,6 @@ body {
 }
 
 p {
-    color: #333;
     font-size: 1.2em;
 }
 
@@ -51,9 +50,9 @@ button:hover {
 }
 
 @keyframes colorChange {
-    0% { color: #ff66b2; }    /* Pink */
-    25% { color: #3498db; }   /* Blue */
-    50% { color: #f1c40f; }   /* Gold */
-    75% { color: #2ecc71; }   /* Green */
-    100% { color: #ff66b2; }  /* Pink */
+    0% { color: #ff66b2; }
+    25% { color: #3498db; }
+    50% { color: #f1c40f; }
+    75% { color: #2ecc71; }
+    100% { color: #ff66b2; }
 }
