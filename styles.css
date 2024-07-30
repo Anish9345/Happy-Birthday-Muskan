@@ -14,8 +14,6 @@ body {
 
 .top-text {
     color: #ff66b2; /* Pink color */
-    font-size: 2em; /* Adjust size if needed */
-    animation: glow 1.5s ease-in-out infinite;
 }
 
 .top-image {
@@ -37,7 +35,6 @@ body {
 .bottom-text {
     color: #3399ff; /* Blue color */
     font-size: 1.2em;
-    animation: glow 1.5s ease-in-out infinite;
 }
 
 button {
@@ -74,18 +71,5 @@ button:hover {
     }
     75% {
         transform: translateX(5px);
-    }
-}
-
-/* Glowing text animation */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 15px #ff66b2, 0 0 20px #ff66b2, 0 0 25px #ff66b2, 0 0 30px #ff66b2, 0 0 35px #ff66b2;
-    }
-    50% {
-        text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2, 0 0 30px #ff66b2, 0 0 40px #ff66b2, 0 0 50px #ff66b2, 0 0 60px #ff66b2, 0 0 70px #ff66b2;
-    }
-    100% {
-        text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 15px #ff66b2, 0 0 20px #ff66b2, 0 0 25px #ff66b2, 0 0 30px #ff66b2, 0 0 35px #ff66b2;
     }
 }
