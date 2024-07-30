@@ -24,7 +24,7 @@ body {
 }
 
 .cake-image {
-    width: 300px;
+    width: 200px; /* Reduced width */
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
