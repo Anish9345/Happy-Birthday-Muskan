@@ -1,43 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Muskan!</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="top-text">Happy Birthday Dear Sister, Muskan!</h1>
-        <img src="IMG_20240730_205742.jpg" alt="Your Image" class="top-image">
-        <img src="88014.jpeg" alt="Birthday Cake" class="cake-image">
-        <p class="bottom-text">Wishing you a day filled with love, joy, and happiness!</p>
-        <audio id="birthdaySong" src="HAPPY Birthday Song – Happy Birthday to You(MP3_160K).mp3"></audio>
-        <button id="playButton" onclick="playMusic()">Play Birthday Song</button>
-        
-        <!-- Additional images with the same rotation animation -->
-        <img src="image1.jpg" alt="Additional Image 1" class="top-image">
-        <img src="image2.jpg" alt="Additional Image 2" class="top-image">
-        <img src="image3.jpg" alt="Additional Image 3" class="top-image">
-        <img src="image4.jpg" alt="Additional Image 4" class="top-image">
-    </div>
-    
-    <!-- Animated balloons -->
-    <div class="balloons">
-        <div class="balloon" id="balloon1"></div>
-        <div class="balloon" id="balloon2"></div>
-        <div class="balloon" id="balloon3"></div>
-        <div class="balloon" id="balloon4"></div>
-    </div>
-    
-    <!-- Sparkling effect -->
-    <div class="sparks">
-        <div class="spark" id="spark1"></div>
-        <div class="spark" id="spark2"></div>
-        <div class="spark" id="spark3"></div>
-        <div class="spark" id="spark4"></div>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6e6;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden; /* Prevents scrollbars */
+    position: relative; /* Ensures absolute positioning works */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+.top-text {
+    color: #ff66b2; /* Pink color */
+}
+
+.top-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: rotate 10s linear infinite; /* Slowed down to 10s */
+}
+
+.cake-image {
+    width: 200px; /* Reduced width */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: shake 3s ease-in-out infinite;
+}
+
+.bottom-text {
+    color: #3399ff; /* Blue color */
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #ff66b2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+/* Horizontal rotation animation */
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Slow shake animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Balloons */
+.balloons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interaction with balloons */
+    z-index: 0;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle at bottom, #ff6666, #ff0000);
+    animation: float 10s ease-in-out infinite;
+}
+
+#balloon1 { left: 10%; animation-delay: 0s; }
+#balloon2 { left: 30%; animation-delay: 2s; }
+#balloon3 { left: 50%; animation-delay: 4s; }
+#balloon4 { left: 70%; animation-delay: 6s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-300px); }
+    100% { transform: translateY(0); }
+}
+
+/* Sparks */
+.sparks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interaction with sparks */
+    z-index: 0;
+}
+
+.spark {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ffdd57;
+    box-shadow: 0 0 10px #ffdd57;
+    border-radius: 50%;
+    animation: sparkle 2s linear infinite;
+}
+
+#spark1 { top: 10%; left: 20%; animation-delay: 0s; }
+#spark2 { top: 20%; left: 40%; animation-delay: 1s; }
+#spark3 { top: 30%; left: 60%; animation-delay: 2s; }
+#spark4 { top: 40%; left: 80%; animation-delay: 3s; }
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; transform: translateY(10px) scale(2); }
+}
