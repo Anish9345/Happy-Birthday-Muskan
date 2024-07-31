@@ -12,6 +12,23 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('playButton').click(); // Simulate click on play button to start audio on page load
 });
 
+// Attempt to detect screenshot taking
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+        showBlurOverlay();
+    } else {
+        hideBlurOverlay();
+    }
+});
+
+function showBlurOverlay() {
+    document.getElementById('mainContent').classList.add('blur-overlay');
+}
+
+function hideBlurOverlay() {
+    document.getElementById('mainContent').classList.remove('blur-overlay');
+}
+
 // Prevent screenshot using print screen key
 document.addEventListener('keyup', function(e) {
     if (e.key === 'PrintScreen') {
