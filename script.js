@@ -1,16 +1,9 @@
 function playMusic() {
     const audio = document.getElementById('birthdaySong');
-    const playButton = document.getElementById('playButton');
-    audio.play().then(() => {
-        playButton.style.display = 'none'; // Hide the play button after audio starts playing
-    }).catch(error => {
+    audio.play().catch(error => {
         console.log('Playback failed:', error);
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('playButton').click(); // Simulate click on play button to start audio on page load
-});
 
 function checkPassword() {
     const passwordInput = document.getElementById('passwordInput').value;
@@ -21,7 +14,12 @@ function checkPassword() {
     if (passwordInput === 'Anish') {
         passwordPrompt.style.display = 'none';
         mainContent.style.display = 'block';
+        playMusic(); // Play the music once the correct password is entered
     } else {
         passwordError.style.display = 'block';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.overflowY = 'auto'; // Ensure the body allows vertical scrolling
+});
