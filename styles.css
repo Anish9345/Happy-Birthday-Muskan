@@ -3,7 +3,7 @@ body {
     background-color: #ffe6e6;
     text-align: center;
     padding: 50px;
-    /* Removed overflow: hidden; */
+    overflow-y: scroll; /* Allow vertical scrolling */
 }
 
 .container {
@@ -11,7 +11,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 .top-text {
